@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Eve Calculator</title>
+     <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+     <!-- <script src="birthday.js"></script> -->
+</head>
+<style>
+     * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+     }
+
+     .container {
+          display: flex;
+          justify-content: center;
+          background-color: orchid;
+          flex-wrap: wrap;
+          padding-top: 40px;
+          width: auto;
+          height: auto;
+     }
+
+     #sub {
+          display: flex;
+          padding: 0 50px;
+          flex-direction: column;
+     }
+
+     #sub h1 {
+          font-size: 6rem;
+          font-family: 'Otomanopee One', 'Times New Roman', Times, serif;
+     }
+
+     span {
+          font-size: 3rem;
+          font-family: 'Otomanopee One', sans-serif;
+     }
+
+     nav h1 {
+          padding: 20px;
+          clip-path: polygon(0 0, 52% 0, 100% 0, 100% 75%, 51% 100%, 0 79%);
+          background-color: #0000ff;
+          background-size: 100% 100%;
+
+     }
+
+     .containers {
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+     }
+
+     #year {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #month {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #days {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #hours {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #minutes {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     label {
+          font-size: 2rem;
+          margin: 10px;
+     }
+
+     #btn {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+          color: white;
+          font-size: 1.5rem;
+          background-color: black;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          font-weight: bolder;
+     }
+
+     #btn:hover {
+          background-color: grey;
+          color: black;
+     }
+
+     @media screen and (max-width:1124px) {
+
+          #sub h1 {
+               font-size: 4rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 2rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 40px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:888px) {
+
+          #sub h1 {
+               font-size: 3rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 30px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:670px) {
+
+          #sub h1 {
+               font-size: 2rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 20px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:400px) {
+
+          #sub h1 {
+               font-size: 1.5rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 10px;
+               flex-direction: column;
+          }
+     }
+</style>
+
+<body>
+     <div class="container">
+          <div id="sub">
+               <h1 id="day">0</h1>
+               <span>Days</span>
+          </div>
+          <div id="sub">
+               <h1 id="hour">0</h1>
+               <span>Hours</span>
+          </div>
+          <div id="sub">
+               <h1 id="minute">0</h1>
+               <span>Minutes</span>
+          </div>
+          <div id="sub">
+               <h1 id="second">0</h1>
+               <span>Seconds</span>
+          </div>
+     </div>
+     <div class="containers">
+          <label>Enter the full date otherwise you will get wrong data.</label>
+          <label>Year</label>
+          <input type="datetime" name="Year" id="year" placeholder="Input the year in AD">
+          <label>Month</label>
+          <input type="datetime" name="Month" id="month" placeholder="Input The Month In The Format Of 1,2,3,etc">
+          <label>Day</label>
+          <input type="datetime" name="Days" id="days" placeholder="Input the Day">
+          <label>Hours</label>
+          <input type="datetime" name="hours" id="hours" placeholder="Input Hours In 24 Hours Format.">
+          <label>Minutes</label>
+          <input type="datetime" name="Minutes" id="minutes" placeholder="Input The Minutes">
+          <button id="btn">Calculate Time</button>
+     </div>
+</body>
+<script>
+     const clickbtn = document.getElementById("btn");
+     clickbtn.addEventListener('click', funct);
+     function funct() {
+          const yearx = document.getElementById("year").value;
+          const monthx = document.getElementById("month").value;
+          const dayx = document.getElementById("days").value;
+          const hourx = document.getElementById("hours").value;
+          const minutex = document.getElementById("minutes").value;
+          const dayEl = document.getElementById("day")
+          const hourEl = document.getElementById("hour")
+          const minuteEl = document.getElementById("minute")
+          const secondEl = document.getElementById("second")
+
+          function countdown() {
+               const birthdaydate = new Date(yearx, monthx-1, dayx, hourx, minutex)
+               const todaydate = new Date()
+               const remainingdays = birthdaydate - todaydate;
+               const miliseconds = remainingdays
+               const totalseconds = miliseconds / 1000;
+               const totaldays = Math.floor(totalseconds / 86400);
+               const totalhours = Math.floor(totalseconds / 3600 % 24)
+               const totalminutes = Math.floor(totalseconds / 60 % 60) % 60;
+               const totalactualseconds = Math.floor(totalseconds % 60)
+               dayEl.innerHTML = FormatTime(totaldays);
+               hourEl.innerHTML = FormatTime(totalhours);
+               minuteEl.innerHTML = FormatTime(totalminutes);
+               secondEl.innerHTML = FormatTime(totalactualseconds);
+          }
+          function FormatTime(time) {
+               return time < 10 ? (`0${time}`) : time
+          }
+          countdown();
+          setInterval(countdown, 1000);
+     }
+</script>
+
+</html>
