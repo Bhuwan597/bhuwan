@@ -1,0 +1,195 @@
+
+     * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+     }
+
+     .container {
+          display: flex;
+          justify-content: center;
+          background-color: orchid;
+          flex-wrap: wrap;
+          padding-top: 40px;
+          width: auto;
+          height: auto;
+     }
+
+     #sub {
+          display: flex;
+          padding: 0 50px;
+          flex-direction: column;
+     }
+
+     #sub h1 {
+          font-size: 6rem;
+          font-family: 'Otomanopee One', 'Times New Roman', Times, serif;
+     }
+
+     span {
+          font-size: 3rem;
+          font-family: 'Otomanopee One', sans-serif;
+     }
+
+     nav h1 {
+          padding: 20px;
+          clip-path: polygon(0 0, 52% 0, 100% 0, 100% 75%, 51% 100%, 0 79%);
+          background-color: #0000ff;
+          background-size: 100% 100%;
+
+     }
+
+     .containers {
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+     }
+
+     #year {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #month {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #days {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #hours {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     #minutes {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+     }
+
+     label {
+          font-size: 2rem;
+          margin: 10px;
+     }
+
+     #btn {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+          color: white;
+          font-size: 1.5rem;
+          background-color: black;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          font-weight: bolder;
+     }
+
+     #btn:hover {
+          background-color: grey;
+          color: black;
+     }
+
+     #btns {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+          color: white;
+          font-size: 1.5rem;
+          background-color: black;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          font-weight: bolder;
+     }
+
+     #btns:hover {
+          background-color: grey;
+          color: black;
+     }
+
+     @media screen and (max-width:1124px) {
+
+          #sub h1 {
+               font-size: 4rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 2rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 40px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:888px) {
+
+          #sub h1 {
+               font-size: 3rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 30px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:670px) {
+
+          #sub h1 {
+               font-size: 2rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 20px;
+               flex-direction: column;
+          }
+     }
+
+     @media screen and (max-width:400px) {
+
+          #sub h1 {
+               font-size: 1.5rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          span {
+               font-size: 1rem;
+               font-family: 'Otomanopee One', sans-serif;
+          }
+
+          #sub {
+               display: flex;
+               padding: 0 10px;
+               flex-direction: column;
+          }
+     }
