@@ -110,6 +110,25 @@
           color: black;
      }
 
+     #btns {
+          padding: 10px;
+          margin: 10px;
+          width: 80%;
+          color: white;
+          font-size: 1.5rem;
+          background-color: black;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          font-weight: bolder;
+     }
+
+     #btns:hover {
+          background-color: grey;
+          color: black;
+     }
+
      @media screen and (max-width:1124px) {
 
           #sub h1 {
@@ -206,6 +225,7 @@
                <span>Seconds</span>
           </div>
      </div>
+     <button id="btns" onclick="sas()">Clear The Data</button>
      <div class="containers">
           <label>Enter the full date otherwise you will get wrong data.</label>
           <label>Year</label>
@@ -222,6 +242,8 @@
      </div>
 </body>
 <script>
+     
+
      const clickbtn = document.getElementById("btn");
      clickbtn.addEventListener('click', funct);
      function funct() {
@@ -236,7 +258,7 @@
           const secondEl = document.getElementById("second")
 
           function countdown() {
-               const birthdaydate = new Date(yearx, monthx-1, dayx, hourx, minutex)
+               const birthdaydate = new Date(yearx, monthx - 1, dayx, hourx, minutex)
                const todaydate = new Date()
                const remainingdays = birthdaydate - todaydate;
                const miliseconds = remainingdays
@@ -255,6 +277,15 @@
           }
           countdown();
           setInterval(countdown, 1000);
+          funct();
+          setInterval(funct, 1000);
+     }
+     function sas() {
+          const yearx = document.getElementById("year").value = "";
+          const monthx = document.getElementById("month").value = "";
+          const dayx = document.getElementById("days").value = "";
+          const hourx = document.getElementById("hours").value = "";
+          const minutex = document.getElementById("minutes").value = "";
      }
 </script>
 
